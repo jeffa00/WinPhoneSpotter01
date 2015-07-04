@@ -1,0 +1,10 @@
+{
+  "AppSettings": {
+    "SiteTitle": "Windows Phone Spotter"
+  },
+  "Data": {
+    "DefaultConnection": {
+      "ConnectionString": "Server=(localdb)\\mssqllocaldb;Database=aspnet5-WebApplication3-0b0afda1-9370-4bde-b0a5-1b58f4c08ca9;Trusted_Connection=True;MultipleActiveResultSets=true"
+    }
+  }
+}
