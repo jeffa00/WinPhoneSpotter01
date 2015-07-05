@@ -52,9 +52,14 @@ namespace WebApplication3
             services.Configure<AppSettings>(Configuration.GetSubKey("AppSettings"));
 
             // Add EF services to the services container.
+
             services.AddEntityFramework()
                 .AddSqlServer()
                 .AddDbContext<ApplicationDbContext>(options =>
+                    options.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
+
+            services.AddEntityFramework()
+                .AddDbContext<PhoneSpottingContext>(options =>
                     options.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
 
             // Add Identity services to the services container.

@@ -1,0 +1,25 @@
+﻿@model PhoneSpottingsViewModel
+@using WebApplication3.Controllers
+@{
+    ViewBag.Title = "Windows Phone Spotting List";
+}
+
+<h1>Windows Phone Spottings</h1>
+
+<a asp-controller="PhoneSpotting" asp-action="Create">Log New Spotting</a> 
+@foreach (var spotting in Model.Spottings)
+{
+<div>
+    <h2>@spotting.PhoneManufacturer @spotting.PhoneModel</h2>
+    <div class="spotting-date">@spotting.SpotTime</div>
+    <div class="spotting-location">
+        <span class="coordinate-name">Latitude:</span><span class="coordinate">@spotting.Latitude</span>
+        <span class="coordinate-name">Longitude:</span><span class="coordinate">@spotting.Longitude</span>
+        <div>Spotting Notes:</div>
+        <div>@spotting.Notes</div>
+
+    </div>
+</div>
+
+}
+

@@ -1,0 +1,42 @@
+﻿@model PhoneSpotting
+@using WebApplication3.Controllers
+@{
+    ViewBag.Title = "Create New Windows Phone Spotting";
+}
+
+
+<h1>Log Windows Phone Spotting!</h1>
+
+<form asp-controller="PhoneSpotting" asp-action="Create" method="post">
+<div>
+    <label asp-for="PhoneManufacturer">Manufacturer:</label>
+    <input asp-for="PhoneManufacturer" />
+</div>
+
+<div>
+    <label asp-for="PhoneModel">Model:</label>
+    <input asp-for="PhoneModel" />
+</div>
+
+<div>
+    <label asp-for="Latitude">Latitude:</label>
+    <input asp-for="Latitude" />
+</div>
+<div>
+    <label asp-for="Longitude">Longitude:</label>
+    <input asp-for="Longitude" />
+</div>
+<div>
+    <label asp-for="SpotTime">Date &amp; Time:</label>
+    <input asp-for="SpotTime" />
+</div>
+<div>
+    <label asp-for="Notes">Notes:</label>
+    <br />
+    <textarea asp-for="Notes"></textarea>
+</div>
+
+@*<input type="hidden" asp-for="PhoneSpottingId" />*@ 
+
+<input type="submit" value="Save" />
+</form>
