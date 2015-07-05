@@ -8,9 +8,19 @@ using WebApplication3.Models;
 namespace WebApplication3.Migrations
 {
     [ContextType(typeof(PhoneSpottingContext))]
-    partial class PhoneSpottingContextModelSnapshot : ModelSnapshot
+    partial class FixLatLongType
     {
-        public override IModel Model
+        public override string Id
+        {
+            get { return "20150705183526_FixLatLongType"; }
+        }
+        
+        public override string ProductVersion
+        {
+            get { return "7.0.0-beta4-12943"; }
+        }
+        
+        public override IModel Target
         {
             get
             {
