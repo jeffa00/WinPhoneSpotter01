@@ -7,7 +7,6 @@
 <h1>Log Windows Phone Spotting!</h1>
 
 <form asp-controller="PhoneSpotting" asp-action="Create" method="post" class="form-horizontal">
-    @*<input type="hidden" asp-for="PhoneSpottingId" />*@
     <div class="form-group">
         <label asp-for="PhoneManufacturer" class="control-label col-xs-2">Manufacturer:</label>
         <div class="col-xs-10">
@@ -51,11 +50,6 @@
             <button type="submit" class="btn btn-primary">Login</button>
         </div>
     </div>
-    @*<div class="form-group">
-        <div class="col-xs-offset-2 col-xs-10">
-            <button type="submit" class="btn btn-primary">Save</button>
-        </div>
-    </div>*@
 </form>
 
 @section Scripts {
