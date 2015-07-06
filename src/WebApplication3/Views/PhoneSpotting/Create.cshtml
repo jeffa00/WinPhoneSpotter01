@@ -4,43 +4,61 @@
     ViewBag.Title = "Create New Windows Phone Spotting";
 }
 
-
 <h1>Log Windows Phone Spotting!</h1>
 
-<form asp-controller="PhoneSpotting" asp-action="Create" method="post">
-<div>
-    <label asp-for="PhoneManufacturer">Manufacturer:</label>
-    <input asp-for="PhoneManufacturer" />
-</div>
+<form asp-controller="PhoneSpotting" asp-action="Create" method="post" class="form-horizontal">
+    @*<input type="hidden" asp-for="PhoneSpottingId" />*@
+    <div class="form-group">
+        <label asp-for="PhoneManufacturer" class="control-label col-xs-2">Manufacturer:</label>
+        <div class="col-xs-10">
+            <input asp-for="PhoneManufacturer" class="form-control" />
+        </div>
+    </div>
 
-<div>
-    <label asp-for="PhoneModel">Model:</label>
-    <input asp-for="PhoneModel" />
-</div>
+    <div class="form-group">
+        <label asp-for="PhoneModel" class="control-label col-xs-2">Model:</label>
+        <div class="col-xs-10">
+            <input asp-for="PhoneModel" class="form-control" />
+        </div>
+    </div>
 
-<div>
-    <label asp-for="Latitude">Latitude:</label>
-    <input asp-for="Latitude" />
-</div>
-<div>
-    <label asp-for="Longitude">Longitude:</label>
-    <input asp-for="Longitude" />
-</div>
-<div>
-    <label asp-for="SpotTime">Date &amp; Time:</label>
-    <input type="text" asp-for="SpotTime" />
-</div>
-<div>
-    <label asp-for="Notes">Notes:</label>
-    <br />
-    <textarea asp-for="Notes"></textarea>
-</div>
-
-@*<input type="hidden" asp-for="PhoneSpottingId" />*@ 
-
-<input type="submit" value="Save" />
+    <div class="form-group">
+        <label asp-for="Latitude" class="control-label col-xs-2">Latitude:</label>
+        <div class="col-xs-10">
+            <input asp-for="Latitude" class="form-control" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="Longitude" class="control-label col-xs-2">Longitude:</label>
+        <div class="col-xs-10">
+            <input asp-for="Longitude" class="form-control" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="SpotTime" class="control-label col-xs-2">Date &amp; Time:</label>
+        <div class="col-xs-10">
+            <input type="text" asp-for="SpotTime" class="form-control" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="Notes" class="control-label col-xs-2">Notes:</label>
+        <div class="col-xs-10">
+            <textarea asp-for="Notes" class="form-control"></textarea>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-xs-offset-2 col-xs-10">
+            <button type="submit" class="btn btn-primary">Login</button>
+        </div>
+    </div>
+    @*<div class="form-group">
+        <div class="col-xs-offset-2 col-xs-10">
+            <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+    </div>*@
 </form>
 
 @section Scripts {
-`<script src="~/scripts/phoneSpotter.js"></script>
+`
+<script src="~/scripts/phoneSpotter.js"></script>
 }
