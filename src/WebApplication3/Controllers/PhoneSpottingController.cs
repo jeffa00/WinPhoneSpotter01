@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
 using WebApplication3.Models;
+using Microsoft.AspNet.Authorization;
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -24,6 +25,7 @@ namespace WebApplication3.Controllers
         }
 
         // GET: /<controller>/Create
+        [Authorize]
         public IActionResult Create()
         {
             return View();
@@ -31,6 +33,7 @@ namespace WebApplication3.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public IActionResult Create(PhoneSpotting newSpotting)
         {
             if (ModelState.IsValid)

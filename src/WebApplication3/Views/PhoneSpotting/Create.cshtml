@@ -28,7 +28,7 @@
 </div>
 <div>
     <label asp-for="SpotTime">Date &amp; Time:</label>
-    <input type="date" asp-for="SpotTime" />
+    <input type="text" asp-for="SpotTime" />
 </div>
 <div>
     <label asp-for="Notes">Notes:</label>
@@ -40,3 +40,7 @@
 
 <input type="submit" value="Save" />
 </form>
+
+@section Scripts {
+`<script src="~/lib/phoneSpotter.js"></script>
+}
